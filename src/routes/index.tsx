@@ -1,5 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
+import ThunderImage from "../media/thunder.png";
 
 export default component$(() => {
   return (
@@ -7,14 +8,14 @@ export default component$(() => {
       <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
         <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
           <div class="">
-            <div class="bg-white rounded-sm border-[1px] p-4 mb-6">
-              <div class="mb-2 flex justify-between items-center">
+            <div class="bg-white rounded-sm border-[1px]  mb-6">
+              <div class=" flex border-b-[1px] justify-between items-center px-4 py-2">
                 <p class="text-lg font-semibold text-gray-800">Job Filter</p>
-                <button class=" text-red-500 text-2xl rotate-45  -mt-3">
+                <button class=" text-red-500 text-2xl rotate-45  hover:bg-red-100 h-6 w-6 pb-[5px] pl-[0px] rounded-full flex justify-center items-center">
                   +
                 </button>
               </div>
-              <div class="mt-4">
+              <div class=" p-4">
                 <fieldset class="mb-6">
                   <legend class="text-lg font-medium text-gray-900 dark:text-white">
                     Contract Status
@@ -34,7 +35,7 @@ export default component$(() => {
                       </div>
 
                       <div>
-                        <strong class="font-medium text-gray-700 dark:text-white">
+                        <strong class="font-normal text-gray-700 dark:text-white">
                           Full Time
                         </strong>
                       </div>
@@ -54,7 +55,7 @@ export default component$(() => {
                       </div>
 
                       <div>
-                        <strong class="font-medium text-gray-700 dark:text-white">
+                        <strong class="font-normal text-gray-700 dark:text-white">
                           Part Time
                         </strong>
                       </div>
@@ -74,7 +75,7 @@ export default component$(() => {
                       </div>
 
                       <div>
-                        <strong class="font-medium text-gray-700 dark:text-white">
+                        <strong class="font-normal text-gray-700 dark:text-white">
                           Internship
                         </strong>
                       </div>
@@ -100,7 +101,7 @@ export default component$(() => {
                       </div>
 
                       <div>
-                        <strong class="font-medium text-gray-700 dark:text-white">
+                        <strong class="font-normal text-gray-700 dark:text-white">
                           On-Site
                         </strong>
                       </div>
@@ -120,7 +121,7 @@ export default component$(() => {
                       </div>
 
                       <div>
-                        <strong class="font-medium text-gray-700 dark:text-white">
+                        <strong class="font-normal text-gray-700 dark:text-white">
                           Remote
                         </strong>
                       </div>
@@ -140,7 +141,7 @@ export default component$(() => {
                       </div>
 
                       <div>
-                        <strong class="font-medium text-gray-700 dark:text-white">
+                        <strong class="font-normal text-gray-700 dark:text-white">
                           Hybrid
                         </strong>
                       </div>
@@ -149,11 +150,11 @@ export default component$(() => {
                 </fieldset>
               </div>
             </div>
-            <div class="bg-white rounded-sm border-[1px] p-4 mb-6">
-              <div class="mb-2">
+            <div class="bg-white rounded-sm border-[1px] mb-6">
+              <div class="px-4 py-2 border-b-[1px]">
                 <p class="text-lg font-semibold text-gray-800">Saved Jobs</p>
               </div>
-              <div>
+              <div class="p-4">
                 <div class="flex justify-between items-center mb-3">
                   <div>
                     {" "}
@@ -210,11 +211,11 @@ export default component$(() => {
                 </div>
               </div>
             </div>
-            <div class="bg-white rounded-sm border-[1px] p-4">
-              <div class="mb-2">
+            <div class="bg-white rounded-sm border-[1px] ">
+              <div class="px-4 py-2 border-b-[1px]">
                 <p class="text-lg font-semibold text-gray-800">Saved Jobs</p>
               </div>
-              <div>
+              <div class="p-4">
                 <p class="text-gray-400">You have not saved any jobs yet!</p>
               </div>
             </div>
@@ -250,16 +251,28 @@ export default component$(() => {
                   Populer Terms:
                 </p>
                 <div class="flex items-center space-x-2">
-                  <div class="border-[1px] rounded-full px-3 border-blue-500 text-blue-500 text-nowrap">
+                  <div
+                    class="border-[1px] rounded-full px-3 transition ease-in-out duration-300 cursor-pointer
+                  hover:bg-blue-500 hover:text-white border-blue-500 text-blue-500 text-nowrap"
+                  >
                     <p class="mb-[2px]">React</p>
                   </div>
-                  <div class="border-[1px] rounded-full px-3 border-blue-500 text-blue-500 text-nowrap">
+                  <div
+                    class="border-[1px] rounded-full px-3 transition ease-in-out duration-300 cursor-pointer
+                  hover:bg-blue-500 hover:text-white border-blue-500 text-blue-500 text-nowrap"
+                  >
                     <p class="mb-[2px]">Vue</p>
                   </div>
-                  <div class="border-[1px] rounded-full px-3 border-blue-500 text-blue-500 text-nowrap">
+                  <div
+                    class="border-[1px] rounded-full px-3 transition ease-in-out duration-300 cursor-pointer
+                  hover:bg-blue-500 hover:text-white border-blue-500 text-blue-500 text-nowrap"
+                  >
                     <p class="mb-[2px]">Mid-Level</p>
                   </div>
-                  <div class="border-[1px] rounded-full px-3 border-blue-500 text-blue-500 text-nowrap">
+                  <div
+                    class="border-[1px] rounded-full px-3 transition ease-in-out duration-300 cursor-pointer
+                  hover:bg-blue-500 hover:text-white border-blue-500 text-blue-500 text-nowrap"
+                  >
                     <p class="mb-[2px]">Laravel</p>
                   </div>
                 </div>
@@ -285,7 +298,7 @@ const JobCard = component$(() => {
     <>
       <div class="bg-white p-5 border-[1px] rounded-sm flex flex-col md:flex-row gap-4 md:gap-0 justify-between items-center">
         <div class="flex justify-between items-center gap-5">
-          <img src="/favicon.svg" alt="" width="70" height="70" />
+          <img src={ThunderImage} alt="" width="70" height="70" />
           <div>
             <p class="text-lg mb-2 font-semibold text-gray-800">
               Frontend Developer
@@ -351,7 +364,7 @@ const JobCard = component$(() => {
             </div>
           </div>
         </div>
-        <div class="flex flex-col gap-4">
+        <div class="flex md:flex-col gap-4">
           <button class="bg-blue-600 hover:bg-blue-600/75 w-32 text-white px-4 py-2 rounded-md">
             Apply
           </button>
