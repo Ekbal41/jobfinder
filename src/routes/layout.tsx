@@ -2,6 +2,7 @@ import { component$, Slot } from "@builder.io/qwik";
 import { routeLoader$ } from "@builder.io/qwik-city";
 import type { RequestHandler } from "@builder.io/qwik-city";
 import Header from "~/components/ui/Header";
+import Footer from "~/components/ui/Footer";
 
 export const onGet: RequestHandler = async ({ cacheControl }) => {
   // Control caching for this request for best performance and to reduce hosting costs:
@@ -25,7 +26,10 @@ export default component$(() => {
     <>
       <main class="bg-gray-50">
         <Header />
-        <Slot />
+        <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+          <Slot />
+        </div>
+        <Footer />
       </main>
     </>
   );

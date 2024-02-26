@@ -16,7 +16,7 @@ export default component$(() => {
               </p>
             </div>
 
-            <div class="mt-4 flex flex-col gap-4 sm:mt-0 sm:flex-row sm:items-center">
+            <div class="mt-4 flex flex-row justify-center gap-4 sm:mt-0 sm:flex-row sm:items-center">
               <button
                 class="inline-flex items-center justify-center gap-1.5 rounded-md border border-gray-200 px-5 py-3 text-gray-500 transition hover:bg-gray-50 hover:text-gray-700 focus:outline-none focus:ring"
                 type="button"
