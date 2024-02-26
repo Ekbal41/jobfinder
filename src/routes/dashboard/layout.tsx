@@ -1,6 +1,8 @@
 import { Slot, component$ } from "@builder.io/qwik";
+import { Link, useLocation } from "@builder.io/qwik-city";
 
 export default component$(() => {
+  const pathname = useLocation().url.pathname;
   return (
     <>
       {" "}
@@ -8,9 +10,17 @@ export default component$(() => {
         <div class="">
           <ul>
             <li>
-              <a
-                href="#"
-                class="flex items-center gap-2 border-s-[3px] border-blue-500 bg-blue-50 px-4 py-3 text-blue-700 dark:bg-blue-500/20 dark:text-blue-50"
+              <Link
+                href="/dashboard"
+                class={`flex items-center gap-2 border-s-[3px]
+                   px-4 py-3 dark:bg-blue-500/20 dark:text-blue-50
+                 ${
+                   pathname === "/dashboard/"
+                     ? "border-blue-500 bg-blue-50 text-blue-700 dark:bg-blue-500/20 dark:text-blue-50"
+                     : "border-transparent text-gray-500 dark:text-gray-400"
+                 }
+
+                 `}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -28,7 +38,7 @@ export default component$(() => {
                 </svg>
 
                 <span class="text-sm font-medium"> Applications </span>
-              </a>
+              </Link>
             </li>
             <li>
               <a
@@ -132,9 +142,17 @@ export default component$(() => {
             </li>
 
             <li>
-              <a
-                href="#"
-                class="flex items-center gap-2 border-s-[3px] border-transparent px-4 py-3 text-gray-500 hover:border-gray-100 hover:bg-gray-50 hover:text-gray-700 dark:text-gray-400 dark:hover:border-gray-700 dark:hover:bg-gray-800 dark:hover:text-gray-200"
+              <Link
+                href="/dashboard/account"
+                class={`flex items-center gap-2 border-s-[3px]
+                   px-4 py-3 dark:bg-blue-500/20 dark:text-blue-50
+                 ${
+                   pathname === "/dashboard/account/"
+                     ? "border-blue-500 bg-blue-50 text-blue-700 dark:bg-blue-500/20 dark:text-blue-50"
+                     : "border-transparent text-gray-500 dark:text-gray-400"
+                 }
+
+                 `}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -152,7 +170,7 @@ export default component$(() => {
                 </svg>
 
                 <span class="text-sm font-medium"> Account </span>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
