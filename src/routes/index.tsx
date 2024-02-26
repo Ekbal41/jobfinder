@@ -36,6 +36,7 @@ export default component$(() => {
                     <div>
                       <strong class="font-normal text-gray-700 dark:text-white">
                         Full Time
+                        <span class="text-sm text-gray-500 mx-1">(123)</span>
                       </strong>
                     </div>
                   </label>
@@ -56,6 +57,7 @@ export default component$(() => {
                     <div>
                       <strong class="font-normal text-gray-700 dark:text-white">
                         Part Time
+                        <span class="text-sm text-gray-500 mx-1">(423)</span>
                       </strong>
                     </div>
                   </label>
@@ -76,6 +78,7 @@ export default component$(() => {
                     <div>
                       <strong class="font-normal text-gray-700 dark:text-white">
                         Internship
+                        <span class="text-sm text-gray-500 mx-1">(83)</span>
                       </strong>
                     </div>
                   </label>
@@ -102,6 +105,7 @@ export default component$(() => {
                     <div>
                       <strong class="font-normal text-gray-700 dark:text-white">
                         On-Site
+                        <span class="text-sm text-gray-500 mx-1">(233)</span>
                       </strong>
                     </div>
                   </label>
@@ -122,6 +126,7 @@ export default component$(() => {
                     <div>
                       <strong class="font-normal text-gray-700 dark:text-white">
                         Remote
+                        <span class="text-sm text-gray-500 mx-1">(23)</span>
                       </strong>
                     </div>
                   </label>
@@ -142,6 +147,7 @@ export default component$(() => {
                     <div>
                       <strong class="font-normal text-gray-700 dark:text-white">
                         Hybrid
+                        <span class="text-sm text-gray-500 mx-1">(93)</span>
                       </strong>
                     </div>
                   </label>

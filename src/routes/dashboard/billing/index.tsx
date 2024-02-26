@@ -3,7 +3,7 @@ export default component$(() => {
   return (
     <div>
       <div class="border-b-[1px] py-2">
-        <h1 class="font-semibold text-lg">Jobs</h1>
+        <h1 class="font-semibold text-lg">Billing Info</h1>
       </div>
       <div>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus eaque

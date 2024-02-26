@@ -4,7 +4,7 @@ export default component$(() => {
   return (
     <>
       <div>
-        <div class="mx-auto max-w-lg">
+        <div class="mx-auto max-w-lg h-max">
           <form
             action="#"
             class="mb-0 mt-6 space-y-4 rounded-lg px-4  sm:px-6 lg:px-8"

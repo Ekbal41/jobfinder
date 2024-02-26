@@ -1,55 +1,81 @@
-import { component$ } from "@builder.io/qwik";
+import { component$, useSignal } from "@builder.io/qwik";
 import { Link } from "@builder.io/qwik-city";
+
 export default component$(() => {
+  const menuOpen = useSignal<boolean>(false);
   return (
     <>
       <header>
-        <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
-          <div class="sm:flex sm:items-center sm:justify-between">
-            <div class="text-center sm:text-left">
-              <h1 class="text-2xl font-semibold text-gray-900 sm:text-3xl uppercase">
-                Welcome to Job Finder!
-              </h1>
-
-              <p class="mt-1.5 text-lg">
-                mdasifekbalshagor@gmail.com
-              </p>
-            </div>
-
-            <div class="mt-4 flex flex-row justify-center gap-4 sm:mt-0 sm:flex-row sm:items-center">
-              <button
-                class="inline-flex items-center justify-center gap-1.5 rounded-md border border-gray-200 px-5 py-3 text-gray-500 transition hover:bg-gray-50 hover:text-gray-700 focus:outline-none focus:ring"
-                type="button"
+        <div class="bg-blue-700 fixed top-0 z-50 bg-opacity-80 backdrop-blur-md w-full">
+          <div class="mx-auto max-w-screen-xl px-4  sm:px-6 py-4 lg:px-8">
+            <div class="flex justify-between items-center">
+              <Link
+                href="/"
+                class="uppercase text-xl md:text-2xl text-white font-semibold"
               >
-                <span class="text-sm font-medium"> Contact Us</span>
-
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-4 w-4"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                  />
-                </svg>
-              </button>
-              <Link href="/dashboard">
-                {" "}
-                <button
-                  class="block rounded-md bg-blue-600 px-5 py-3 text-sm font-medium text-white transition hover:bg-blue-700 focus:outline-none focus:ring"
-                  type="button"
-                >
-                  Dashboard
-                </button>
+                JobFinder
               </Link>
+
+              <div class="relative">
+                <button
+                  onClick$={() => (menuOpen.value = !menuOpen.value)}
+                  class="text-white  flex gap-2 justify-center px-3 py-1 items-center hover:bg-blue-600"
+                >
+                  <p class="capitalize text-lg fpnt-semibold">Asif Ekbal</p>
+                  <img
+                    src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=100&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Asif Ekbal"
+                    class="rounded-full object-cover"
+                    height="20"
+                    width="20"
+                  />
+                </button>
+                {menuOpen.value && (
+                  <div class="absolute p-1 right-0 bg-white w-48 rounded-md shadow-sm border-[1px] border-blue-100">
+                    <ul class="rounded-md ">
+                      <li class="hover:bg-blue-100 px-3 ">
+                        <Link href="/auth/signin" class="block py-2">
+                          Sign In
+                        </Link>
+                      </li>
+                      <li class="hover:bg-blue-100 px-3 ">
+                        <Link href="/auth/signup" class="block py-2">
+                          Create Account
+                        </Link>
+                      </li>
+                      <li class="hover:bg-blue-100 px-3 border-t-[1px]">
+                        <Link href="/dashboard/profile" class="block py-2">
+                          Profile
+                        </Link>
+                      </li>
+                      <li class="hover:bg-blue-100 px-3 ">
+                        <Link href="/dashboard" class="block py-2">
+                          Dashboard
+                        </Link>
+                      </li>
+                      <li class="hover:bg-blue-100 px-3 border-t-[1px]">
+                        <Link href="/dashboard/profile" class="block py-2">
+                          Help
+                        </Link>
+                      </li>
+                      <li class="hover:bg-blue-100 px-3 ">
+                        <Link href="/dashboard/profile" class="block py-2">
+                          FAQ
+                        </Link>
+                      </li>
+                      <li class="hover:bg-blue-100 px-3 border-t-[1px]">
+                        <Link href="/dashboard/profile" class="block py-2">
+                          Logout
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>
+        <div class="h-12"></div>
       </header>
     </>
   );
