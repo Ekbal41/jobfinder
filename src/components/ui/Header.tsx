@@ -11,15 +11,15 @@ export default component$(() => {
             <div class="flex justify-between items-center">
               <Link
                 href="/"
-                class="uppercase text-xl md:text-2xl text-white font-semibold"
+                class="uppercase text-lg md:text-2xl text-white font-semibold"
               >
-                JobFinder
+                Jobify
               </Link>
 
               <div class="relative">
                 <button
                   onClick$={() => (menuOpen.value = !menuOpen.value)}
-                  class="text-white  flex gap-2 justify-center px-3 py-1 items-center hover:bg-blue-600"
+                  class="text-white  flex gap-2 justify-center px-3 py-1 items-center bg-blue-500 hover:bg-blue-600 rounded-md"
                 >
                   <p class="capitalize text-lg fpnt-semibold">Asif Ekbal</p>
                   <img
@@ -31,7 +31,7 @@ export default component$(() => {
                   />
                 </button>
                 {menuOpen.value && (
-                  <div class="absolute p-1 right-0 bg-white w-48 rounded-md shadow-sm border-[1px] border-blue-100">
+                  <div class="absolute right-0 bg-white w-48 rounded-sm shadow-md border-[1px] border-blue-100">
                     <ul class="rounded-md ">
                       <li class="hover:bg-blue-100 px-3 ">
                         <Link href="/auth/signin" class="block py-2">

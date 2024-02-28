@@ -4,13 +4,13 @@ export default component$(() => {
   return (
     <>
       <div>
-        <div class="mx-auto max-w-lg h-max">
+        <div class="mx-auto max-w-lg ">
           <form
             action="#"
             class="mb-0 mt-6 space-y-4 rounded-lg px-4  sm:px-6 lg:px-8"
           >
             <h1 class="text-center text-2xl font-bold sm:text-3xl">
-              Sign In to your account
+              Sign In
             </h1>
             <p class="  text-gray-500 text-center ">
               Or you can{" "}

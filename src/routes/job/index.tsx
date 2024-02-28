@@ -92,7 +92,8 @@ export default component$(() => {
           </div>
         </div>
       </div>
-      <div class="mt-6 grid lg:grid-cols-2 gap-6">
+      <div class="mt-6 grid lg:grid-cols-3 gap-6">
+        <JobCard />
         <JobCard />
         <JobCard />
       </div>

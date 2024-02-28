@@ -3,8 +3,8 @@ import LightThemeImage from "../../../media/light.png";
 import DarkThemeImage from "../../../media/dark.png";
 export default component$(() => {
   return (
-    <div>
-      <div class="border-b-[1px] py-2">
+    <div class="">
+      <div class="border-b[1px] py-2">
         <h1 class="font-semibold text-lg">Account Info</h1>
       </div>
       <div class="mt-3 lg:w-1/2">
