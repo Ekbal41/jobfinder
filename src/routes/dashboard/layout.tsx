@@ -5,10 +5,141 @@ export default component$(() => {
   const pathname = useLocation().url.pathname;
   return (
     <>
-      {" "}
       <div class="grid grid-cols-1 gap-4 lg:grid-cols-4 lg:gap-8">
+        <div class=" lg:hidden fixed bottom-0 right-0 pb-2 pt-3 shadow-lg w-full pe-2 bg-white z-50">
+          <div class="grid grid-cols-4">
+            <div class="">
+              <Link
+                href="/dashboard"
+                class={`
+                    flex flex-col items-center justify-center 
+                 ${
+                   pathname === "/dashboard/"
+                     ? " text-blue-700"
+                     : "border-transparent text-gray-500"
+                 }
+
+                 `}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-5 h-5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15.042 21.672 13.684 16.6m0 0-2.51 2.225.569-9.47 5.227 7.917-3.286-.672Zm-7.518-.267A8.25 8.25 0 1 1 20.25 10.5M8.288 14.212A5.25 5.25 0 1 1 17.25 10.5"
+                  />
+                </svg>
+                <p>Jobs</p>
+              </Link>
+            </div>
+            <div class="">
+
+              <Link
+                href="/dashboard/profile"
+                class={`
+                    flex flex-col items-center justify-center 
+                 ${
+                   pathname === "/dashboard/profile/"
+                     ? " text-blue-700"
+                     : "border-transparent text-gray-500"
+                 }
+
+                 `}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="size-5 opacity-75"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                </svg>
+                <p>Profile</p>
+              </Link>
+            </div>
+            <div>
+              <Link
+                href="/dashboard/account"
+                class={`
+                    flex flex-col items-center justify-center 
+                 ${
+                   pathname === "/dashboard/account/"
+                     ? " text-blue-700"
+                     : "border-transparent text-gray-500"
+                 }
+
+                 `}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="size-5 opacity-75"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                  />
+                </svg>
+                <p>Account</p>
+              </Link>
+            </div>
+
+            <div>
+              <Link
+                href="/dashboard/billing"
+                class={`
+                    flex flex-col items-center justify-center 
+                 ${
+                   pathname === "/dashboard/billing/"
+                     ? " text-blue-700"
+                     : "border-transparent text-gray-500"
+                 }
+
+                 `}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="size-5 opacity-75"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"
+                  />
+                </svg>
+
+                <p>Billing</p>
+              </Link>
+            </div>
+          </div>
+        </div>
         <div class="">
-          <ul>
+          <ul class="hidden lg:block">
             <li>
               <Link
                 href="/dashboard"
@@ -141,7 +272,7 @@ export default component$(() => {
             </li>
           </ul>
         </div>
-        <div class=" lg:col-span-3">
+        <div class="lg:col-span-3">
           <div>
             <Slot />
           </div>

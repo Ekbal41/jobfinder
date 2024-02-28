@@ -4,7 +4,7 @@ import DarkThemeImage from "../../../media/dark.png";
 export default component$(() => {
   return (
     <div class="">
-      <div class="border-b[1px] py-2">
+      <div class="border-b[1px] pb-2">
         <h1 class="font-semibold text-lg">Account Info</h1>
       </div>
       <div class="mt-3 lg:w-1/2">

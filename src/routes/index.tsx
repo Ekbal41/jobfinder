@@ -7,7 +7,7 @@ export default component$(() => {
     <>
       <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
         <div class="">
-          <div class="hidden lg:block bg-white rounded-sm border-[1px]  mb-6">
+          <div class="hidden lg:block bg-white rounded-sm shadow-sm  mb-6">
             <div class=" flex border-b-[1px] justify-between items-center px-4 py-2">
               <p class="text-lg font-semibold text-gray-800">Job Filter</p>
               <button class=" text-red-500 text-2xl rotate-45  hover:bg-red-100 h-6 w-6 pb-[5px] pl-[0px] rounded-full flex justify-center items-center">
@@ -155,7 +155,7 @@ export default component$(() => {
               </fieldset>
             </div>
           </div>
-          <div class="hidden lg:block bg-white rounded-sm border-[1px] mb-6">
+          <div class="hidden lg:block bg-white rounded-sm shadow-sm mb-6">
             <div class="px-4 py-2 border-b-[1px]">
               <p class="text-lg font-semibold text-gray-800">Saved Jobs</p>
             </div>
@@ -216,7 +216,7 @@ export default component$(() => {
               </div>
             </div>
           </div>
-          <div class="hidden lg:block bg-white rounded-sm border-[1px] ">
+          <div class="hidden lg:block bg-white rounded-sm shadow-sm ">
             <div class="px-4 py-2 border-b-[1px]">
               <p class="text-lg font-semibold text-gray-800">Saved Jobs</p>
             </div>
@@ -227,7 +227,7 @@ export default component$(() => {
         </div>
         <div class="lg:col-span-2">
           <div class="flex justify-between items-center gap-2">
-            <div class="relative mx-auto border-[1px] bg-white  rounded-sm flex-grow ">
+            <div class="relative mx-auto shadow-sm bg-white  rounded-sm flex-grow ">
               <svg
                 class="text-gray-400 h-4 w-4 fill-current absolute left-0 top-0 mt-3 ml-4"
                 xmlns="http://www.w3.org/2000/svg"
@@ -324,7 +324,7 @@ export default component$(() => {
 export const JobCard = component$(() => {
   return (
     <>
-      <div class="bg-white p-5 border-[1px] rounded-sm">
+      <div class="bg-white p-4 shadow-sm rounded-sm">
         <div class="flex justify-between items-start">
           <h2 class="uppercase bg-orange-100 px-2 rounded-sm text-sm">
             Id : 234635
@@ -356,7 +356,7 @@ export const JobCard = component$(() => {
               >
                 Frontend Developer
               </Link>
-              <div class="flex gap-2 items-center mb-2">
+              <div class="flex gap-2 items-center mt-2 mb-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"

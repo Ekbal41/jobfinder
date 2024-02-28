@@ -2,7 +2,7 @@ import { component$ } from "@builder.io/qwik";
 export default component$(() => {
   return (
     <div>
-      <div class="py-2">
+      <div class="pb-2">
         <h1 class="font-semibold text-lg">Job Aplications</h1>
       </div>
       <div>
