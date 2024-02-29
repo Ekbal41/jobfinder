@@ -1,4 +1,5 @@
 import { component$ } from "@builder.io/qwik";
+import { Link } from "@builder.io/qwik-city";
 export default component$(() => {
   return (
     <div>
@@ -16,15 +17,18 @@ export default component$(() => {
   );
 });
 
-const AppliedJobCard = component$(() => {
+export const AppliedJobCard = component$(() => {
   return (
-    <div>
+    <Link href="/job/progress">
       <div class="bg-white p-4 rounded-md shadow-sm border-[1px] border-white hover:border-gray-200">
-        <div class="flex justify-between items-center">
+        <div class="flex justify-between items-start">
           <h2 class="uppercase bg-orange-100 px-2 rounded-sm text-sm">
             Id : 234635
           </h2>
-          <p class="text-gray-600  font-thin">12 hour ago</p>
+
+          <p class="text-green-700 bg-green-200 w-fit  px-2 pb-[2px] text-sm font-semibold ">
+            Confirmed
+          </p>
         </div>
         <div class="mt-2">
           <div class=" flex-grow">
@@ -93,6 +97,6 @@ const AppliedJobCard = component$(() => {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 });

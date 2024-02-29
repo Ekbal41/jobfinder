@@ -1,17 +1,18 @@
 import { component$, useSignal } from "@builder.io/qwik";
 import { Link } from "@builder.io/qwik-city";
+import ThunderIcon from "../../media/thunder.png";
 
 export default component$(() => {
   const menuOpen = useSignal<boolean>(false);
   return (
     <>
       <header>
-        <div class="bg-blue-700 fixed top-0 z-50 bg-opacity-80 backdrop-blur-md w-full">
+        <div class="bg-white shadow-sm fixed top-0 z-50 bg-opacity-80 backdrop-blur-md w-full">
           <div class="mx-auto max-w-screen-xl px-4  sm:px-6 py-4 lg:px-8">
             <div class="flex justify-between items-center">
               <Link
                 href="/"
-                class="uppercase text-lg md:text-2xl text-white font-semibold"
+                class="uppercase text-lg md:text-2xl text-blue-600 font-semibold"
               >
                 Jobify
               </Link>
@@ -19,11 +20,11 @@ export default component$(() => {
               <div class="relative">
                 <button
                   onClick$={() => (menuOpen.value = !menuOpen.value)}
-                  class="text-white  flex gap-2 justify-center px-3 py-1 items-center bg-blue-500 hover:bg-blue-600 rounded-md"
+                  class="flex gap-2 justify-center items-center hover:bg-blue-50 rounded-md"
                 >
                   <p class="capitalize text-lg fpnt-semibold">Asif Ekbal</p>
                   <img
-                    src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=100&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    src={ThunderIcon}
                     alt="Asif Ekbal"
                     class="rounded-full object-cover"
                     height="20"

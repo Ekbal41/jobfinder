@@ -26,7 +26,7 @@ export default component$(() => {
     <>
       <main class="bg-gray-50 h-max">
         <Header />
-        <div class="mx-auto max-w-screen-xl p-4  lg:px-8 lg:py-12">
+        <div class="mx-auto max-w-screen-xl px-4 pb-4 pt-2  lg:px-8 lg:py-12">
           <Slot />
         </div>
         <Footer />

@@ -1,160 +1,18 @@
-import { component$ } from "@builder.io/qwik";
+import { component$, useSignal } from "@builder.io/qwik";
 import { Link, type DocumentHead } from "@builder.io/qwik-city";
 // import ThunderImage from "../media/thunder.png";
 
 export default component$(() => {
+  const showMobileFilter = useSignal(false);
   return (
     <>
       <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
         <div class="">
-          <div class="hidden lg:block bg-white rounded-sm shadow-sm  mb-6">
-            <div class=" flex border-b-[1px] justify-between items-center px-4 py-2">
-              <p class="text-lg font-semibold text-gray-800">Job Filter</p>
-              <button class=" text-red-500 text-2xl rotate-45  hover:bg-red-100 h-6 w-6 pb-[5px] pl-[0px] rounded-full flex justify-center items-center">
-                +
-              </button>
-            </div>
-            <div class=" p-4">
-              <fieldset class="mb-6">
-                <legend class="text-lg font-medium text-gray-900 dark:text-white">
-                  Contract Status
-                </legend>
-                <div class="mt-4 space-y-2">
-                  <label
-                    for="Option1"
-                    class="flex cursor-pointer items-start gap-4"
-                  >
-                    <div class="flex items-center">
-                      &#8203;
-                      <input
-                        type="checkbox"
-                        class="size-4 rounded border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:ring-offset-gray-900"
-                        id="Option1"
-                      />
-                    </div>
-
-                    <div>
-                      <strong class="font-normal text-gray-700 dark:text-white">
-                        Full Time
-                        <span class="text-sm text-gray-500 mx-1">(123)</span>
-                      </strong>
-                    </div>
-                  </label>
-
-                  <label
-                    for="Option2"
-                    class="flex cursor-pointer items-start gap-4"
-                  >
-                    <div class="flex items-center">
-                      &#8203;
-                      <input
-                        type="checkbox"
-                        class="size-4 rounded border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:ring-offset-gray-900"
-                        id="Option2"
-                      />
-                    </div>
-
-                    <div>
-                      <strong class="font-normal text-gray-700 dark:text-white">
-                        Part Time
-                        <span class="text-sm text-gray-500 mx-1">(423)</span>
-                      </strong>
-                    </div>
-                  </label>
-
-                  <label
-                    for="Option3"
-                    class="flex cursor-pointer items-start gap-4"
-                  >
-                    <div class="flex items-center">
-                      &#8203;
-                      <input
-                        type="checkbox"
-                        class="size-4 rounded border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:ring-offset-gray-900"
-                        id="Option3"
-                      />
-                    </div>
-
-                    <div>
-                      <strong class="font-normal text-gray-700 dark:text-white">
-                        Internship
-                        <span class="text-sm text-gray-500 mx-1">(83)</span>
-                      </strong>
-                    </div>
-                  </label>
-                </div>
-              </fieldset>
-              <fieldset class="mb-6">
-                <legend class="text-lg font-medium text-gray-900 dark:text-white">
-                  Location Status
-                </legend>
-                <div class="mt-4 space-y-2">
-                  <label
-                    for="Option1"
-                    class="flex cursor-pointer items-start gap-4"
-                  >
-                    <div class="flex items-center">
-                      &#8203;
-                      <input
-                        type="checkbox"
-                        class="size-4 rounded border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:ring-offset-gray-900"
-                        id="Option1"
-                      />
-                    </div>
-
-                    <div>
-                      <strong class="font-normal text-gray-700 dark:text-white">
-                        On-Site
-                        <span class="text-sm text-gray-500 mx-1">(233)</span>
-                      </strong>
-                    </div>
-                  </label>
-
-                  <label
-                    for="Option2"
-                    class="flex cursor-pointer items-start gap-4"
-                  >
-                    <div class="flex items-center">
-                      &#8203;
-                      <input
-                        type="checkbox"
-                        class="size-4 rounded border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:ring-offset-gray-900"
-                        id="Option2"
-                      />
-                    </div>
-
-                    <div>
-                      <strong class="font-normal text-gray-700 dark:text-white">
-                        Remote
-                        <span class="text-sm text-gray-500 mx-1">(23)</span>
-                      </strong>
-                    </div>
-                  </label>
-
-                  <label
-                    for="Option3"
-                    class="flex cursor-pointer items-start gap-4"
-                  >
-                    <div class="flex items-center">
-                      &#8203;
-                      <input
-                        type="checkbox"
-                        class="size-4 rounded border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:ring-offset-gray-900"
-                        id="Option3"
-                      />
-                    </div>
-
-                    <div>
-                      <strong class="font-normal text-gray-700 dark:text-white">
-                        Hybrid
-                        <span class="text-sm text-gray-500 mx-1">(93)</span>
-                      </strong>
-                    </div>
-                  </label>
-                </div>
-              </fieldset>
-            </div>
+          {/* web filter */}
+          <div class="hidden lg:block mb-6">
+            <JobFilter />
           </div>
+          {/* svaed jobs */}
           <div class="hidden lg:block bg-white rounded-sm shadow-sm mb-6">
             <div class="px-4 py-2 border-b-[1px]">
               <p class="text-lg font-semibold text-gray-800">Saved Jobs</p>
@@ -216,6 +74,7 @@ export default component$(() => {
               </div>
             </div>
           </div>
+          {/* svaed jobs */}
           <div class="hidden lg:block bg-white rounded-sm shadow-sm ">
             <div class="px-4 py-2 border-b-[1px]">
               <p class="text-lg font-semibold text-gray-800">Saved Jobs</p>
@@ -227,6 +86,7 @@ export default component$(() => {
         </div>
         <div class="lg:col-span-2">
           <div class="flex justify-between items-center gap-2">
+            {/* search bar */}
             <div class="relative mx-auto shadow-sm bg-white  rounded-sm flex-grow ">
               <svg
                 class="text-gray-400 h-4 w-4 fill-current absolute left-0 top-0 mt-3 ml-4"
@@ -251,7 +111,13 @@ export default component$(() => {
                 placeholder="Search for job Title"
               />
             </div>
-            <button class="bg-blue-600 lg:hidden hover:bg-blue-600/75  text-white px-3 py-2 rounded-sm">
+            {/* filter button */}
+            <button
+              class="bg-blue-600 lg:hidden hover:bg-blue-600/75  text-white px-3 py-2 rounded-sm"
+              onClick$={() =>
+                (showMobileFilter.value = !showMobileFilter.value)
+              }
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -317,6 +183,167 @@ export default component$(() => {
           </div>
         </div>
       </div>
+      {showMobileFilter.value && (
+        <div class="lg:hidden fixed bottom-0 left-0 w-full ">
+          <JobFilter />
+        </div>
+      )}
+    </>
+  );
+});
+
+const JobFilter = component$(() => {
+  return (
+    <>
+      {" "}
+      <div class=" bg-white rounded-sm shadow-sm">
+        <div class=" flex border-b-[1px] justify-between items-center px-4 py-2">
+          <p class="text-lg font-semibold text-gray-800">Job Filter</p>
+          <button class=" text-red-500 text-2xl rotate-45  hover:bg-red-100 h-6 w-6 pb-[5px] pl-[0px] rounded-full flex justify-center items-center">
+            +
+          </button>
+        </div>
+        <div class=" p-4">
+          <fieldset class="mb-6">
+            <legend class="text-lg font-medium text-gray-900 dark:text-white">
+              Contract Status
+            </legend>
+            <div class="mt-4 space-y-2">
+              <label
+                for="Option1"
+                class="flex cursor-pointer items-start gap-4"
+              >
+                <div class="flex items-center">
+                  &#8203;
+                  <input
+                    type="checkbox"
+                    class="size-4 rounded border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:ring-offset-gray-900"
+                    id="Option1"
+                  />
+                </div>
+
+                <div>
+                  <strong class="font-normal text-gray-700 dark:text-white">
+                    Full Time
+                    <span class="text-sm text-gray-500 mx-1">(123)</span>
+                  </strong>
+                </div>
+              </label>
+
+              <label
+                for="Option2"
+                class="flex cursor-pointer items-start gap-4"
+              >
+                <div class="flex items-center">
+                  &#8203;
+                  <input
+                    type="checkbox"
+                    class="size-4 rounded border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:ring-offset-gray-900"
+                    id="Option2"
+                  />
+                </div>
+
+                <div>
+                  <strong class="font-normal text-gray-700 dark:text-white">
+                    Part Time
+                    <span class="text-sm text-gray-500 mx-1">(423)</span>
+                  </strong>
+                </div>
+              </label>
+
+              <label
+                for="Option3"
+                class="flex cursor-pointer items-start gap-4"
+              >
+                <div class="flex items-center">
+                  &#8203;
+                  <input
+                    type="checkbox"
+                    class="size-4 rounded border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:ring-offset-gray-900"
+                    id="Option3"
+                  />
+                </div>
+
+                <div>
+                  <strong class="font-normal text-gray-700 dark:text-white">
+                    Internship
+                    <span class="text-sm text-gray-500 mx-1">(83)</span>
+                  </strong>
+                </div>
+              </label>
+            </div>
+          </fieldset>
+          <fieldset class="mb-6">
+            <legend class="text-lg font-medium text-gray-900 dark:text-white">
+              Location Status
+            </legend>
+            <div class="mt-4 space-y-2">
+              <label
+                for="Option1"
+                class="flex cursor-pointer items-start gap-4"
+              >
+                <div class="flex items-center">
+                  &#8203;
+                  <input
+                    type="checkbox"
+                    class="size-4 rounded border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:ring-offset-gray-900"
+                    id="Option1"
+                  />
+                </div>
+
+                <div>
+                  <strong class="font-normal text-gray-700 dark:text-white">
+                    On-Site
+                    <span class="text-sm text-gray-500 mx-1">(233)</span>
+                  </strong>
+                </div>
+              </label>
+
+              <label
+                for="Option2"
+                class="flex cursor-pointer items-start gap-4"
+              >
+                <div class="flex items-center">
+                  &#8203;
+                  <input
+                    type="checkbox"
+                    class="size-4 rounded border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:ring-offset-gray-900"
+                    id="Option2"
+                  />
+                </div>
+
+                <div>
+                  <strong class="font-normal text-gray-700 dark:text-white">
+                    Remote
+                    <span class="text-sm text-gray-500 mx-1">(23)</span>
+                  </strong>
+                </div>
+              </label>
+
+              <label
+                for="Option3"
+                class="flex cursor-pointer items-start gap-4"
+              >
+                <div class="flex items-center">
+                  &#8203;
+                  <input
+                    type="checkbox"
+                    class="size-4 rounded border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:ring-offset-gray-900"
+                    id="Option3"
+                  />
+                </div>
+
+                <div>
+                  <strong class="font-normal text-gray-700 dark:text-white">
+                    Hybrid
+                    <span class="text-sm text-gray-500 mx-1">(93)</span>
+                  </strong>
+                </div>
+              </label>
+            </div>
+          </fieldset>
+        </div>
+      </div>
     </>
   );
 });
@@ -324,7 +351,7 @@ export default component$(() => {
 export const JobCard = component$(() => {
   return (
     <>
-      <div class="bg-white p-4 shadow-sm rounded-sm">
+      <div class="bg-white p-4 shadow-sm rounded-md border-[1px] border-white hover:border-gray-200">
         <div class="flex justify-between items-start">
           <h2 class="uppercase bg-orange-100 px-2 rounded-sm text-sm">
             Id : 234635

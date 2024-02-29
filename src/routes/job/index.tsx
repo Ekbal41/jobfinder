@@ -5,7 +5,7 @@ export default component$(() => {
     <>
       <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
         <div class="order-first">
-          <div class="bg-white p-4 border-[1px] rounded-sm">
+          <div class="bg-white p-4  rounded-sm">
             <div>
               <p class="text-lg mb-2 font-semibold text-blue-700">
                 Frontend Developer
@@ -77,7 +77,7 @@ export default component$(() => {
         </div>
         <div class=" lg:col-span-2">
           {" "}
-          <div class="bg-white p-4 border-[1px] rounded-sm">
+          <div class="bg-white p-4  rounded-sm">
             <h1 class="text-lg font-semibold">Job Description</h1>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
             perspiciatis inventore unde ratione. Magnam sequi eveniet expedita
